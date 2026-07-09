@@ -271,3 +271,29 @@ transform:scale(1.05);
 box-shadow:0 0 35px rgba(212,175,55,.6);
 
 }
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.contact-card{
+background:#181818;
+padding:25px;
+border-radius:18px;
+text-decoration:none;
+color:white;
+border:1px solid #d4af37;
+transition:.4s;
+}
+
+.contact-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(212,175,55,.5);
+}
+
+.contact-card h3{
+color:#d4af37;
+margin-bottom:10px;
+}
