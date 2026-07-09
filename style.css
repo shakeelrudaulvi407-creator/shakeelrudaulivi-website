@@ -11,8 +11,11 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#0d0d0d;
-color:#f5f5f5;
+background:url("1783594131478.jpeg");
+background-size:cover;
+background-attachment:fixed;
+background-position:center;
+color:#2c1d12;
 line-height:1.8;
 }
 
