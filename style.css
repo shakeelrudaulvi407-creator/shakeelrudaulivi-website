@@ -197,3 +197,44 @@ font-size:30px;
 }
 
 }
+.about-container{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.author-photo{
+width:280px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(212,175,55,.5);
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text h3{
+color:#d4af37;
+font-size:32px;
+margin-bottom:15px;
+}
+
+.about-text p{
+font-size:18px;
+line-height:1.8;
+}
+
+@media(max-width:900px){
+
+.about-container{
+flex-direction:column;
+text-align:center;
+}
+
+.author-photo{
+width:220px;
+}
+
+}
