@@ -511,3 +511,130 @@ height:600px;
 border:none;
 border-radius:15px;
 }
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width:768px){
+
+header{
+padding:15px;
+}
+
+.logo{
+font-size:32px;
+text-align:center;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+}
+
+nav a{
+font-size:18px;
+}
+
+.hero{
+display:flex;
+flex-direction:column;
+text-align:center;
+padding:50px 20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.hero-image img{
+width:80%;
+max-width:280px;
+margin-top:25px;
+}
+
+.about-container{
+display:flex;
+flex-direction:column;
+text-align:center;
+}
+
+.author-photo{
+width:220px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.about-text{
+font-size:17px;
+line-height:1.8;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+width:100%;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.video-grid iframe{
+width:100%;
+height:520px;
+border-radius:15px;
+}
+
+.poetry-grid{
+grid-template-columns:1fr;
+}
+
+.poetry-card{
+padding:20px;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.contact-card{
+padding:20px;
+}
+
+section{
+padding:60px 20px;
+}
+
+h2{
+font-size:34px;
+text-align:center;
+}
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+font-size:17px;
+}
+
+footer{
+text-align:center;
+font-size:15px;
+padding:20px;
+}
+
+}
