@@ -93,3 +93,9 @@ const footer = document.querySelector("footer p");
 
 footer.innerHTML =
 `© ${new Date().getFullYear()} Shakeel Rudaulivi. All Rights Reserved.`;
+document.getElementById("topBtn").onclick=function(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
