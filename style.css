@@ -10,13 +10,18 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:url("1783594131478.jpeg");
-background-size:cover;
-background-attachment:fixed;
-background-position:center;
-color:#2c1d12;
-line-height:1.8;
+    font-family:'Poppins',sans-serif;
+    color:#f5f5f5;
+    line-height:1.8;
+
+    background:
+    linear-gradient(rgba(8,8,8,.92),rgba(8,8,8,.95)),
+    url("1783594131478.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
 }
 
 /* Header */
@@ -117,7 +122,10 @@ box-shadow:0 0 40px rgba(212,175,55,.45);
 /* Sections */
 
 section{
-padding:90px 8%;
+    background:rgba(15,15,15,0.75);
+    backdrop-filter:blur(6px);
+    border-radius:18px;
+    margin:40px auto;
 }
 
 section h2{
