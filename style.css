@@ -297,3 +297,34 @@ box-shadow:0 0 30px rgba(212,175,55,.5);
 color:#d4af37;
 margin-bottom:10px;
 }
+#quote{
+
+text-align:center;
+
+background:#111;
+
+padding:70px 10%;
+
+}
+
+#quote blockquote{
+
+font-size:30px;
+
+font-style:italic;
+
+color:#D4AF37;
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+
+#quote p{
+
+font-size:20px;
+
+color:#ccc;
+
+}
