@@ -238,3 +238,36 @@ width:220px;
 }
 
 }
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(212,175,55,.25);
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 35px rgba(212,175,55,.6);
+
+}
