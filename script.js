@@ -3,99 +3,145 @@
 // script.js
 // =========================
 
-// Smooth scroll for navigation
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
+// Smooth Scroll
+document.querySelectorAll("nav a").forEach(link => {
 
-        const target = this.getAttribute('href');
+link.addEventListener("click", function(e){
 
-        if(target.startsWith("#")){
+const target=this.getAttribute("href");
 
-            e.preventDefault();
+if(target.startsWith("#")){
 
-            document.querySelector(target).scrollIntoView({
-                behavior:"smooth"
-            });
+e.preventDefault();
 
-        }
+const section=document.querySelector(target);
 
-    });
+if(section){
+
+section.scrollIntoView({
+behavior:"smooth"
 });
 
-// Fade animation on scroll
-const sections = document.querySelectorAll("section");
+}
 
-const observer = new IntersectionObserver((entries)=>{
+}
 
-    entries.forEach(entry=>{
+});
 
-        if(entry.isIntersecting){
+});
 
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
+// Scroll Animation
 
-        }
+const sections=document.querySelectorAll("section");
 
-    });
+const observer=new IntersectionObserver((entries)=>{
 
-},{threshold:0.2});
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{
+threshold:0.15
+});
 
 sections.forEach(section=>{
 
-    section.style.opacity="0";
-    section.style.transform="translateY(60px)";
-    section.style.transition="1s";
+section.style.opacity="0";
+section.style.transform="translateY(60px)";
+section.style.transition="all .8s ease";
 
-    observer.observe(section);
+observer.observe(section);
 
 });
 
-// Hero title animation
-const heroTitle = document.querySelector(".hero h1");
+// Hero Glow
 
-let glow = true;
+const heroTitle=document.querySelector(".hero h1");
+
+if(heroTitle){
+
+let glow=true;
 
 setInterval(()=>{
 
-    if(glow){
+heroTitle.style.textShadow=glow
+? "0 0 25px rgba(212,175,55,.7)"
+: "none";
 
-        heroTitle.style.textShadow="0 0 20px gold";
-
-    }else{
-
-        heroTitle.style.textShadow="none";
-
-    }
-
-    glow=!glow;
+glow=!glow;
 
 },1000);
 
-// Button animation
+}
+
+// Button Hover
+
 document.querySelectorAll(".btn").forEach(btn=>{
 
-    btn.addEventListener("mouseenter",()=>{
+btn.addEventListener("mouseenter",()=>{
 
-        btn.style.transform="scale(1.05)";
-
-    });
-
-    btn.addEventListener("mouseleave",()=>{
-
-        btn.style.transform="scale(1)";
-
-    });
+btn.style.transform="translateY(-3px)";
 
 });
 
-// Footer year
-const footer = document.querySelector("footer p");
+btn.addEventListener("mouseleave",()=>{
 
-footer.innerHTML =
-`© ${new Date().getFullYear()} Shakeel Rudaulivi. All Rights Reserved.`;
-document.getElementById("topBtn").onclick=function(){
+btn.style.transform="translateY(0)";
+
+});
+
+});
+
+// Back To Top
+
+const topBtn=document.getElementById("topBtn");
+
+if(topBtn){
+
+topBtn.style.display="none";
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.addEventListener("click",()=>{
+
 window.scrollTo({
+
 top:0,
 behavior:"smooth"
+
 });
+
+});
+
 }
+
+// Footer Year
+
+const copyright=document.querySelector(".copyright");
+
+if(copyright){
+
+copyright.innerHTML=
+`© ${new Date().getFullYear()} Shakeel Rudaulivi. All Rights Reserved.`;
+
+}
+
