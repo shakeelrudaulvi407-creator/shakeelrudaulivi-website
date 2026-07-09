@@ -58,35 +58,15 @@ color:#d4af37;
 
 /* Hero */
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:50px;
-    padding:120px 8% 80px;
-
-    background:
-    linear-gradient (rgba (0,0,0,.65),rgba(0,0,0,.80)),
-    url("1783594131478.jpeg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-
-    animation:heroZoom 18 s ease-in-out infinite alternate;
+..hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at top right,
+    rgba(212,175,55,.12),
+    transparent 60%);
+    pointer-events:none;
 }
-
-@keyframes heroZoom{
-    from{
-        background-size:100%;
-    }
-    to{
-        background-size:110%;
-    }
-@media (max-width:768px){
-
 .hero{
     flex-direction:column;
     text-align:center;
